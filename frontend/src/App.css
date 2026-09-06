@@ -1,0 +1,316 @@
+.app {
+  min-height: 100svh;
+  padding: 24px;
+  padding-bottom: max(24px, env(safe-area-inset-bottom));
+  background:
+    radial-gradient(circle at top right, rgba(14, 116, 144, 0.28), transparent 32%),
+    linear-gradient(180deg, #071018 0%, #0b1c26 100%);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.kicker,
+.hint {
+  margin: 0;
+  color: #8fb3c4;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1,
+h2 {
+  margin: 6px 0;
+  color: #f4fbff;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 620px;
+  color: #b7cdd8;
+}
+
+.risk-badge {
+  min-width: 240px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: #10212c;
+  border: 1px solid #234556;
+}
+
+.risk-badge span,
+.risk-badge em {
+  display: block;
+  font-style: normal;
+  color: #9ec0d0;
+  font-size: 12px;
+}
+
+.risk-badge strong {
+  display: block;
+  margin: 6px 0;
+  font-size: 28px;
+}
+
+.risk-badge.low strong { color: #22c55e; }
+.risk-badge.moderate strong { color: #eab308; }
+.risk-badge.high strong { color: #f97316; }
+.risk-badge.critical strong { color: #ef4444; }
+
+.alert-banner {
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.alert-banner.low {
+  background: rgba(34, 197, 94, 0.14);
+  color: #86efac;
+}
+
+.alert-banner.moderate {
+  background: rgba(234, 179, 8, 0.14);
+  color: #fde68a;
+}
+
+.alert-banner.high {
+  background: rgba(249, 115, 22, 0.16);
+  color: #fdba74;
+}
+
+.alert-banner.critical {
+  background: rgba(239, 68, 68, 0.16);
+  color: #fca5a5;
+}
+
+.level-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.level-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #10212c;
+  border: 1px solid #234556;
+  color: #d7e6ef;
+  font-size: 13px;
+}
+
+.level-chip.active {
+  border-color: #22d3ee;
+}
+
+.level-chip i,
+.legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.preset-row {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+button.ghost {
+  background: #163140;
+  color: #d7e6ef;
+}
+
+button.ghost.danger {
+  background: #3b1d1d;
+  color: #fecaca;
+}
+
+.probs {
+  margin-top: 16px;
+}
+
+.probs > div {
+  display: grid;
+  grid-template-columns: 90px 1fr 40px;
+  gap: 8px;
+  align-items: center;
+  margin: 6px 0;
+  font-size: 12px;
+  color: #c5dbe6;
+}
+
+.bar {
+  height: 8px;
+  background: #163140;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.bar em {
+  display: block;
+  height: 100%;
+}
+
+.cards,
+.workspace,
+.map-head,
+.legend,
+.field span {
+  display: flex;
+  gap: 12px;
+}
+
+.cards {
+  margin-bottom: 16px;
+}
+
+.env-card {
+  flex: 1;
+  padding: 14px;
+  border-radius: 16px;
+  background: #10212c;
+  border: 1px solid #234556;
+}
+
+.env-card p {
+  margin: 6px 0 0;
+  color: #8fb3c4;
+  font-size: 13px;
+}
+
+.env-card strong {
+  color: #f4fbff;
+  font-size: 20px;
+}
+
+.workspace {
+  align-items: stretch;
+}
+
+.panel {
+  background: #10212c;
+  border: 1px solid #234556;
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.panel:first-child {
+  width: 360px;
+  flex-shrink: 0;
+}
+
+.map-panel {
+  flex: 1;
+  min-height: 560px;
+}
+
+.map,
+.leaflet-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 16px;
+}
+
+.legend {
+  flex-wrap: wrap;
+  margin-left: auto;
+  color: #c5dbe6;
+  font-size: 13px;
+}
+
+.legend i {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.field {
+  display: block;
+  margin: 12px 0;
+}
+
+.field span {
+  justify-content: space-between;
+  color: #c5dbe6;
+  font-size: 14px;
+}
+
+.field input {
+  width: 100%;
+}
+
+button {
+  width: 100%;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  background: #22d3ee;
+  color: #04212a;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+@media (max-width: 980px) {
+  .app {
+    padding: 14px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .topbar,
+  .workspace,
+  .cards {
+    flex-direction: column;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .panel:first-child,
+  .risk-badge {
+    width: 100%;
+  }
+
+  .map,
+  .leaflet-container {
+    height: 280px;
+  }
+
+  button,
+  button.ghost {
+    min-height: 44px;
+  }
+
+  .field input {
+    min-height: 28px;
+  }
+}
